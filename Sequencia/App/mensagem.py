@@ -22,9 +22,9 @@ class Mensagem:
             msg_arq.close()
 
             try:
-                msg_lista.insert(len(msg_lista)-1, "< Message name = " + str(self.name) + " " + "prob = " + str(self.prob) + "source = " + str(self.source) + " target = " + str(self.target) + "/>" + '\n')
+                msg_lista.insert(len(msg_lista)-1, "< Message name = " + str(self.name) + " " + " prob = " + str(self.prob) + " source = " + str(self.source) + " target = " + str(self.target) + " " + "/>" + '\n')
 
-                if not self.name:
+                if not self.name or not self.prob or not self.source or not self.target:
                     raise Exception('MessageFormatException')
             
             except:
@@ -39,24 +39,15 @@ class Mensagem:
         else:
             msg_arq = open("msg.txt", 'w+')
             msg_lista.append("< Message >" + '\n')
-            msg_lista.append(+" < Message  name = " + " " + str(self.name) + " "+" prob = " +" "+ str(self.prob) +" " + "source = " + " " + str(self.source) + " " + "target = " + " " + str(self.target) +  "/>" + '\n')
+            msg_lista.append(+" < Message  name = " + " " + str(self.name) + " "+" prob = " + " " + str(self.prob) + " " + " source = " + " " + str(self.source) + " " + "target = " + " " + str(self.target) +  "/>" + '\n')
             msg_lista.append("</ Message >" + '\n')
             msg_arq.writelines(msg_lista)
 
-        #try:
-        #    if not self.name :
-        #        raise Exception('MessageFormatException')                   
-                    
-            
-        #except:
-        #    sys.exit(1)    
-
-                     
-            
+              
         return
                 
 
 #mensagem1 = Mensagem(None,0.9,"teste2","teste3")
 #mensagem1.CadastrarMensagem()
-mensagem2 = Mensagem("Sincrona", 0.8, "Lifeline1", "Lifeline2")
+mensagem2 = Mensagem("Sincrona", 0.5, "Lifeline1", "Lifeline2")
 mensagem2.CadastrarMensagem()
