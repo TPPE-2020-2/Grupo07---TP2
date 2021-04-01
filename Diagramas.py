@@ -1,7 +1,1 @@
-def atividades():
-
-if __name__ == "__main__":s
-
-
-
-
+if __name__ == "__main__":
