@@ -23,8 +23,8 @@ class testeNodo(unittest.TestCase):
     self.assertEqual(nodoFinal.nodo['nomeNodo'], 'Nodo Final', 'Nodo final não criado')
     self.assertEqual(nodoFinal.nodo['nomeNodoOrigem'], ['Nodo Fusao'], 'Nodo final não criado')
 
-if __name__ == "__main__":
-  unittest.main()
+"""if __name__ == "__main__":
+  unittest.main()"""
 
 if __name__ == "__main__" and __package__ is None:
     from os import sys, path
