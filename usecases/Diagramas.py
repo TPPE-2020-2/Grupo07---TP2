@@ -19,4 +19,4 @@ class Diagrama():
         ET.SubElement(ActivityDiagramTransitions, 'Transition', name=transicao['nome'], prob=str(transicao['prob']))
 
       tree = ET.ElementTree(DiagramaAtividade)
-      tree.write('teste.xml')
+      tree.write('DiagramaAtividades.xml')

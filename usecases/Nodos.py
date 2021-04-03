@@ -19,7 +19,7 @@ class Nodo:
         self.arrayNodo.append(nodo) 
 
 class NodoDecisao:
-    def __init__(self, nomeNodo = "", nomeNodoOrigem = [], nomeNodoDestino = [], probabilidade = 0):
+    def __init__(self, nomeNodo = "", nomeNodoOrigem = [], nomeNodoDestino = []):
         try:
             if (len(nomeNodoOrigem) > 1):
                 raise Exception('ActivityDiagramRuleException')
@@ -28,7 +28,6 @@ class NodoDecisao:
                 'nomeNodo': nomeNodo,
                 'nomeNodoOrigem': nomeNodoOrigem,
                 'nomeNodoDestino': nomeNodoDestino,
-                'probabilidade': probabilidade,
                 'tipo': 'decisao'
             }
             self.nodo = nodo
@@ -37,7 +36,7 @@ class NodoDecisao:
 
 
 class NodoFusao:
-    def __init__(self, nomeNodo = "", nomeNodoOrigem = [], nomeNodoDestino = [], probabilidade = 0):
+    def __init__(self, nomeNodo = "", nomeNodoOrigem = [], nomeNodoDestino = []):
         try:
             if (len(nomeNodoDestino) > 1):
                 raise Exception('ActivityDiagramRuleException')
@@ -46,7 +45,6 @@ class NodoFusao:
                 'nomeNodo': nomeNodo,
                 'nomeNodoOrigem': nomeNodoOrigem,
                 'nomeNodoDestino': nomeNodoDestino,
-                'probabilidade': probabilidade,
                 'tipo': 'fusao'
             }
             self.nodo = nodo
