@@ -2,38 +2,111 @@ import os.path
 import sys
 
 class Mensagem:
+    arrayMensagem = []
+
+    def __init__(self, name= "", prob = 0.0, source="", target=""):
+        
+            mensagem = {
+                'name': name,
+                'prob': prob,
+                'source': source,
+                'target': target,
+                'tipo': 'inicial'
+            }
+            self.arrayMensagem.append(mensagem)
+        
+    def addMensagem(self, mensagem):
+        self.arrayMensagem.append(mensagem) 
+
+class MensagemSincrona:
     def __init__(self, name="", prob=0.0, source="", target=""):
-        self.name = name
-        self.prob = prob
-        self.source = source
-        self.target = target
+    #  try:
+    #      if not name or not prob or not source or not target:
+    #          raise Exception('MessageFormatException')
+         
+         mensagem = {
+             'name': name,
+             'prob': prob,
+             'source': source,
+             'target': target,
+             'tipo': 'Sincrona'
+         }
 
-    def get_name_fals(self): 
-        return 'Mensagem 1'
+         self.mensagem = mensagem
 
-    def get_name(self):
-        return self.name
+    #  except Exception as error:
+    #         print('Falta um atributo', error) 
     
-    def set_name(self, name):
-        self.name = name
 
-    def get_prob(self):
-        return self.prob
-    
-    def set_prob(self, prob):
-        self.prob = prob
+class MensagemAssincrona:
+    def __init__(self, name="", prob=0.0, source="", target=""):
+     try:
+         if not name or not prob or not source or not target:
+             raise Exception('MessageFormatException')
+         
+         mensagem = {
+             'name': name,
+             'prob': prob,
+             'source': source,
+             'target': target,
+             'tipo': 'Assincrona'
+         }
 
-    def get_source(self):
-        return self.source
-    
-    def set_source(self, source):
-        self.source = source
+         self.mensagem = mensagem
 
-    def get_target(self):
-        return self.target
+     except Exception as error:
+            print('Falta um atributo', error) 
+
+class MensagemResposta:
+    def __init__(self, name="", prob=0.0, source="", target=""):
+     try:
+         if not name or not prob or not source or not target:
+             raise Exception('MessageFormatException')
+         
+         mensagem = {
+             'name': name,
+             'prob': prob,
+             'source': source,
+             'target': target,
+             'tipo': 'Resposta'
+         }
+
+         self.mensagem = mensagem
+
+     except Exception as error:
+            print('Falta um atributo', error) 
+
+if __name__ == "__main__" and __package__ is None:
+    from os import sys, path
+    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
+
+    # def get_name_fals(self): 
+    #     return 'Mensagem 1'
+
+    # def get_name(self):
+    #     return self.name
     
-    def set_target(self, target):
-        self.target = target
+    # def set_name(self, name):
+    #     self.name = name
+
+    # def get_prob(self):
+    #     return self.prob
+    
+    # def set_prob(self, prob):
+    #     self.prob = prob
+
+    # def get_source(self):
+    #     return self.source
+    
+    # def set_source(self, source):
+    #     self.source = source
+
+    # def get_target(self):
+    #     return self.target
+    
+    # def set_target(self, target):
+    #     self.target = target
 
          
 
