@@ -1,18 +1,26 @@
 import os.path
 
-class Lifeline(object): 
-    def __init__(self, name = 'teste'):
-        self.name = name
+class Lifeline: 
+    arrayLifeline = []
+    def __init__(self, nomeLifeline =""):
+        self.nomeLifeline = nomeLifeline
+        
+        self.arrayLifeline.append(nomeLifeline)
+        
+
+    def addLifeline(self, nomeLifeline):
+        self.arrayLifeline.append(nomeLifeline) 
+        
 
     #falsificacao
     def get_name_fals(self):
-        return 'Lifeline Teste'
+      return 'Lifeline fals'
 
-    def get_name(self):
-        return self.name
+    # def get_name(self):
+    #     return self.name
     
-    def set_name(self, name):
-        self.name = name
+    # def set_name(self, name):
+    #     self.name = name
 
     
 
