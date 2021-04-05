@@ -23,16 +23,15 @@ class MensagemSincrona:
     #  try:
     #      if not name or not prob or not source or not target:
     #          raise Exception('MessageFormatException')
-         
-         mensagem = {
-             'name': name,
-             'prob': prob,
-             'source': source,
-             'target': target,
-             'tipo': 'Sincrona'
-         }
+        mensagem = {
+            'name': name,
+            'prob': prob,
+            'source': source,
+            'target': target,
+            'tipo': 'Sincrona'
+        }
 
-         self.mensagem = mensagem
+        self.mensagem = mensagem
 
     #  except Exception as error:
     #         print('Falta um atributo', error) 
@@ -40,41 +39,41 @@ class MensagemSincrona:
 
 class MensagemAssincrona:
     def __init__(self, name="", prob=0.0, source="", target=""):
-     try:
-         if not name or not prob or not source or not target:
-             raise Exception('MessageFormatException')
-         
-         mensagem = {
-             'name': name,
-             'prob': prob,
-             'source': source,
-             'target': target,
-             'tipo': 'Assincrona'
-         }
+        try:
+            if not name or not prob or not source or not target:
+                raise Exception('MessageFormatException')
+            
+            mensagem = {
+                'name': name,
+                'prob': prob,
+                'source': source,
+                'target': target,
+                'tipo': 'Assincrona'
+            }
 
-         self.mensagem = mensagem
+            self.mensagem = mensagem
 
-     except Exception as error:
-            print('Falta um atributo', error) 
+        except Exception as error:
+                print('Falta um atributo', error) 
 
 class MensagemResposta:
     def __init__(self, name="", prob=0.0, source="", target=""):
-     try:
-         if not name or not prob or not source or not target:
-             raise Exception('MessageFormatException')
-         
-         mensagem = {
-             'name': name,
-             'prob': prob,
-             'source': source,
-             'target': target,
-             'tipo': 'Resposta'
-         }
+        try:
+            if not name or not prob or not source or not target:
+                raise Exception('MessageFormatException')
+            
+            mensagem = {
+                'name': name,
+                'prob': prob,
+                'source': source,
+                'target': target,
+                'tipo': 'Resposta'
+            }
 
-         self.mensagem = mensagem
+            self.mensagem = mensagem
 
-     except Exception as error:
-            print('Falta um atributo', error) 
+        except Exception as error:
+                print('Falta um atributo', error) 
 
 if __name__ == "__main__" and __package__ is None:
     from os import sys, path
@@ -108,7 +107,6 @@ if __name__ == "__main__" and __package__ is None:
     # def set_target(self, target):
     #     self.target = target
 
-         
 
 #     def CadastrarMensagem(self):
 
@@ -143,7 +141,6 @@ if __name__ == "__main__" and __package__ is None:
 #             msg_lista.append("</ Message >" + '\n')
 #             msg_arq.writelines(msg_lista)
 
-              
 #         return
                 
 
