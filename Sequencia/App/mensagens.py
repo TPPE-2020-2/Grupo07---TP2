@@ -21,11 +21,7 @@ class Mensagem():
 
 class MensagemSincrona:
     def __init__(self, name="", prob=0.0, source="", target=""):
-        try:
-            if not name or not prob or not source or not target:
-                raise Exception('MessageFormatException')
-        except Exception as error:
-            print('Falta um atributo', error)
+        
 
         mensagem = {
             'name': name,
@@ -36,6 +32,12 @@ class MensagemSincrona:
         }
 
         self.mensagem = mensagem
+
+    try:
+       if not name or not prob or not source or not target:
+         raise Exception('MessageFormatException')
+    except Exception as error:
+        print('Falta um atributo', error)
 
 
 class MensagemAssincrona:

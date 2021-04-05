@@ -3,7 +3,9 @@ import os.path
 class Lifeline: 
     arrayLifeline = []
     def __init__(self, nomeLifeline =""):
-        self.nomeLifeline = nomeLifeline
+        lifeline = {
+            "nomeLifeline": nomeLifeline
+        }
         
         self.arrayLifeline.append(nomeLifeline)
         

@@ -1,16 +1,15 @@
-from diagrama_sequencia import DiagramaSequencia
 
-class Fragments:
+class Fragments():
     arrayFragments = []
-    def __init__(self, nome: str, condicao_guarda: bool, representedBy = DiagramaSequencia(nome)):
+    def __init__(self, nome="", condicao_guarda=True, representedBy = ""):
         try:
             if not representedBy:
                 raise Exception('EmptyOptionalFragment')
             
             fragmento_opcional = {
-                self.nome = nome
-                self.condicao_guarda = condicao_guarda
-                self.representedBy = DiagramaSequencia(nome)
+                'nome': nome,
+                'condicao_guarda': condicao_guarda,
+                'representedBy': DiagramaSequenci.nome_diagrama
             }
             if condicao_guarda:
                 self.arrayFragments.append(fragmento_opcional)
