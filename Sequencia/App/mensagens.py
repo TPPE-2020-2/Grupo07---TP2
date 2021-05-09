@@ -48,9 +48,6 @@ class MensagemSincrona:
             self.mensagem = mensagem
 
 
-
-
-
 class MensagemAssincrona:
     def __init__(self, name="", prob=0.0, source="", target=""):
         try:
