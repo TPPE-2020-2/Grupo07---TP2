@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 from usecases.Atividades import Atividade
 from usecases.Nodos import Nodo, NodoDecisao, NodoFusao, NodoFinal

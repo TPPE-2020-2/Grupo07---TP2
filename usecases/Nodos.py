@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Nodo:
     arrayNodo = []
 
@@ -11,6 +12,7 @@ class Nodo:
                 "nomeNodoDestino": nomeNodoDestino[0],
                 'tipo': 'inicial'
             }
+            self.nodoInicial = nodoInicial
             self.arrayNodo.append(nodoInicial)
         except Exception as error:
             print('Nodo Inicial', error)

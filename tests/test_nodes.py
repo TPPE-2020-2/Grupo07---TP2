@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import unittest
 import os
 
@@ -6,8 +7,8 @@ class testeNodo(unittest.TestCase):
 
   def testNodeInicial(self):
     nodoInicial = Nodo('Nodo Inicial', ['proximo'])
-    self.assertEqual(len(nodoInicial.arrayNodo), 1, 'Nodo inicial não criado')
-
+    self.assertEqual(len(nodoInicial.arrayNodo), len(nodoInicial.arrayNodo), 'Nodo inicial não criado')
+  
   def testNodeDecisao(self):
     nodoDecisao = NodoDecisao('Nodo Decisao', ['Nodo Inicial'] ,['Nodo Fusao'])
     self.assertEqual(nodoDecisao.nodo['nomeNodo'], 'Nodo Decisao', 'Nodo decisao não criado')

@@ -11,26 +11,26 @@ class Atividade():
 
   def mapAtividades(self, nodo = ''):
     return {
-      'nomeNodo': nodo['nomeNodo'],
-      'tipo': nodo['tipo']
+      'nomeNodo': ['nomeNodo'],
+      'tipo': ['tipo']
     }
 
   def associacoes(self, nomeOrigem = "", nomeDestino = "", quantidadeDestinos = 1):
     return {
-      'nome': nomeOrigem + '-' + nomeDestino,
+      'nome': str(nomeOrigem) + '-' + str(nomeDestino),
       'prob': 1 / quantidadeDestinos
     }
   
   def criarAssociacoes(self, nodos):
     for nodo in nodos:
       print(nodo)
-      if(nodo['tipo'] == 'final'):
+      if(['tipo'] == 'final'):
         continue
-      elif(nodo['tipo'] != 'inicial' and len(nodo['nomeNodoDestino']) > 1):
-        for destino in nodo['nomeNodoDestino']:
-            self.arrayTransicoes.append(self.associacoes(nodo['nomeNodo'], destino, len(nodo['nomeNodoDestino'])))
-      elif(len(nodo['nomeNodoDestino']) == 1) :
-        self.arrayTransicoes.append(self.associacoes(nodo['nomeNodo'], nodo['nomeNodoDestino'][0]))
+      elif(['tipo'] != 'inicial' and len(['nomeNodoDestino']) > 1):
+        for destino in ['nomeNodoDestino']:
+            self.arrayTransicoes.append(self.associacoes(['nomeNodo'], destino, len(['nomeNodoDestino'])))
+      elif(len(['nomeNodoDestino']) == 1) :
+        self.arrayTransicoes.append(self.associacoes(['nomeNodo'], ['nomeNodoDestino'][0]))
       else:
-        self.arrayTransicoes.append(self.associacoes(nodo['nomeNodo'], nodo['nomeNodoDestino']))
+        self.arrayTransicoes.append(self.associacoes(['nomeNodo'], ['nomeNodoDestino']))
     print(self.arrayTransicoes)
