@@ -1,0 +1,30 @@
+Observações:
+------------
+
+Mover método OK! 
+
+A refatoração `Substituir método por objeto-método` consiste em extrair *um
+método* para uma classe, instanciar um objeto dessa classe e executar o método
+`compute`. A refatoração apresentada foi executada em mais de um elemento da
+classe, não foi apresentado o método compute. Contudo as variáveis de origem se
+tornaram atributos do método-objeto. 
+
+Na refatoração `Extrair método` não aparece as instruções extraídas a partir do
+método init, conforme informado pela mensagem do commit.
+
+A refatoração substituir condicional por polimorfismo implica em implementar métodos polimórficos (por sobrescrita) em subclasses da classe em que a condicional está sendo substituída. No projeto apresentado a classe original não foi herdada e não há método sobrescrito na única classe criada. 
+
+
+Critérios de avaliação:
+-----------------------
+
+Ref. 1 - mover método ou mover atributo (20 pontos): OK - 20 pontos. 
+
+Ref. 2 - extrair método (20 pontos): NOK - 0 pontos. 
+
+Ref. 3 - substituir método por objeto-método (30 pontos): +/- , 15 pontos.
+
+Ref. 4 - substituir condicional por polimorfismo (30 pontos): NOK, 0 pontos.
+
+
+NOTA FINAL: 35 pontos.
